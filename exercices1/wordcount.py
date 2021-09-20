@@ -64,7 +64,7 @@ def print_words(filename):
   words_count =  get_words_count(filename)
   
   for w in sorted(words_count):
-    print '{} {}'.format(w, words_count[w])
+    print('{} {}'.format(w, words_count[w]))
 
 def print_top(filename):
   # open and read a file
@@ -72,7 +72,7 @@ def print_top(filename):
   
   for i, (w, c) in enumerate(sorted(words_count.items(), key=lambda x: x[1], reverse=True)):
     if i < 20:
-      print '{} {}'.format(w, c)
+      print('{} {}'.format(w, c))
     else:
       break
 ###
@@ -81,7 +81,7 @@ def print_top(filename):
 # calls the print_words() and print_top() functions which you must define.
 def main():
   if len(sys.argv) != 3:
-    print 'usage: ./wordcount.py {--count | --topcount} file'
+    print('usage: ./wordcount.py {--count | --topcount} file')
     sys.exit(1)
 
   option = sys.argv[1]
@@ -91,7 +91,7 @@ def main():
   elif option == '--topcount':
     print_top(filename)
   else:
-    print 'unknown option: ' + option
+    print('unknown option: ' + option)
     sys.exit(1)
 
 if __name__ == '__main__':
