@@ -46,7 +46,7 @@ import sys
 # Then print_words() and print_top() can just call the utility function.
 
 def get_words_count(filename):
-  with open('small.txt') as f:
+  with open(filename) as f:
     content = f.read().lower()
 
   words = content.split()
